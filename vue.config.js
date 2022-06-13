@@ -75,17 +75,12 @@ module.exports = defineConfig({
 
     devServer: {
         port: 8080,
-        allowedHosts: ['local.biq.cat'],
         proxy: {
             [process.env.VUE_APP_API_PATH]: {
                 target: 'http://localhost:8000',
                 changeOrigin: true,
                 pathRewrite: path => path.replace(new RegExp('^' + process.env.VUE_APP_API_PATH), '')
             },
-            '/prod-api': {
-                target: 'https://biq.cat',
-                changeOrigin: true
-            }
         }
     }
 
