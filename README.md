@@ -1,4 +1,4 @@
-# crypto-mobile
+# vant-sample
 
 ## Project setup
 ```
